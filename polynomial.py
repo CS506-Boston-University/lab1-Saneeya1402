@@ -26,7 +26,7 @@ class Int:
     def evaluate(self, x_value):
         # TODO: Implement evaluation for integer constant
         # Should return an Int object with the stored integer value
-        return self 
+        return self
 
     def simplify(self):
         # TODO (Optional Exercise): Implement simplification
@@ -89,6 +89,7 @@ class Sub:
         # Parenthesize Add/Sub operands to preserve grouping
         def wrap(e):
             return "( " + repr(e) + " )" if isinstance(e, (Add, Sub)) else repr(e)
+
         return wrap(self.p1) + " - " + wrap(self.p2)
 
     def evaluate(self, x_value):
@@ -110,6 +111,7 @@ class Div:
         # Parenthesize Add/Sub operands to preserve grouping
         def wrap(e):
             return "( " + repr(e) + " )" if isinstance(e, (Add, Sub)) else repr(e)
+
         return wrap(self.p1) + " / " + wrap(self.p2)
 
     def evaluate(self, x_value):
@@ -121,8 +123,6 @@ class Div:
 
     def simplify(self):
         pass
-
-
 
 
 # Original polynomial example
